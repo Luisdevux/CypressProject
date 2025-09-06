@@ -1,5 +1,5 @@
 /// <reference types="cypress"/>
-import { faker } from '@faker-js/faker';
+import { faker, ka_GE } from '@faker-js/faker';
 
 describe("Formulário de cadastro", () => {
     beforeEach(() => {
@@ -22,7 +22,7 @@ describe("Formulário de cadastro", () => {
         const email = faker.internet.email();
         const senha = faker.internet.password();
         cy.getByData('nome-input').type(nome);
-        cy.getByData('email-input').type(email);
+        cy.getByData('email-input').type(email); 
         cy.getByData('senha-input').type(senha);
         cy.getByData('checkbox-input').click();
         cy.getByData('botao-enviar').click();
